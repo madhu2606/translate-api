@@ -46,5 +46,5 @@ app.post('/translate',authenticated,(req,res) =>{
 		res.send({"status":400,"result":"","error":error}) ;
 	}
 })
-
-app.listen(port, () => console.log(`app listening at http://localhost:${port}`))
+app.listen(process.env.PORT || 3000, 
+	() => console.log("Server is running..."));
